@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Merry Christmas </title>
+<style>
+    
+    #background {
+        background-image: url(background1.svg);
+        background-size: cover;
+        position: fixed;
+        background-position: top center;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1; 
+        
+    }
+    #snow {
+        background-image: url(snow3.png);
+        height: 100%;
+	   left: 0;
+	   position: absolute;
+	   top: 0;
+	   width: 100%;
+        z-index: -1;
+        -webkit-animation: snow 15s linear infinite;
+        animation: snow 15s linear infinite;
+
+    }  
+
+    
+    #trees {
+        
+        position: fixed;
+        top: 350px;
+        right: 5px;
+        width: 300px;
+        
+    }
+    
+    #fact2 {
+        
+        position: absolute;
+        width: 180px;
+        height: 100px;
+        top: 1px;
+        right: 40px;
+        display: none;
+        z-index: 2;
+        animation: slidein 2s, opacity 5s;
+        
+    }
+    
+        @keyframes slidein {
+    from { top: -200px; 
+            opacity: 0;            }
+    to   { top: 1px; 
+            opacity: 1; 
+            }
+            
+}
+
+    #present{
+        width: 250px;
+        height: 100px;
+        position: absolute;
+        left: 0px;
+        top: 160px;
+        display: none;
+        animation: slide 2s;
+        
+        
+    }
+    
+            @keyframes slide  {
+    from { left: -200px; 
+            opacity: 0;            }
+    to   { left: 1px; 
+            opacity: 1; 
+            }
+            
+}
+   
+ 
+                   @keyframes slideout  {
+    from { top: 1px; 
+            opacity: 1;            }
+    to   { top: -200px; 
+            opacity: 0; 
+            }
+            
+}     
+
+    
+    #present2 {
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        right: 1px;
+        top: 225px;
+        display: none;
+        animation: slide1 2s;
+        
+    }
+    
+                   @keyframes slide1  {
+    from { right: -200px; 
+            opacity: 0;            }
+    to   { right: 1px; 
+            opacity: 1; 
+            }
+    }
+    
+    
+    #sign {
+        display: none;
+        width: 290px;
+        height: 200px;
+        position: fixed;
+        top: 415px;
+        left: 360px;
+        z-index: 1;
+        animation: fadein 2s linear;
+        
+    }
+    
+    
+    @keyframes fadein {
+        from { opacity: 0;    
+        }
+        to {
+            opacity: 1;
+        }
+      
+    }
+    
+    
+    #lights {
+        
+        display: none;
+        animation: glow 3s infinite;
+    }
+    
+    
+    @keyframes glow {
+        from { -webkit-filter: brightness(60%);}
+  to { -webkit-filter: brightness (150%);}
+        
+    }
+    
+    
+    #light1 {
+        position: fixed;
+        width: 80px;
+        height: 100px;
+        top: -50px;
+        left: 15px;
+         animation: swing 3s ease infinite;
+        
+    }
+    #light2 {
+        position: absolute;
+        width: 80px;
+        height: 100px;
+        top: -50px;
+        left: 250px;
+         animation: swing 3s ease infinite;
+        
+    }
+    
+    
+    
+    #light3 {
+        position: absolute;
+        width: 80px;
+        height: 100px;
+        top: -50px;
+        left: 550px;
+         animation: swing 3s ease infinite;
+        
+    }
+    
+    
+ 
+    
+    #light4 {
+         position: absolute;
+        width: 80px;
+        height: 100px;
+        top: -50px;
+        left: 800px;
+        animation: swing 3s ease infinite;
+        
+        
+    }
+    
+
+        #light5 {
+        position: absolute;
+        width: 80px;
+        height: 100px;
+        top: -50px;
+        left: 1100px;
+        animation: swing 3s ease infinite;
+        
+        
+    }
+    
+    #light6 {
+        position: absolute;
+        width: 80px;
+        height: 100px;
+        top: -50px;
+        left: 1325px;
+        z-index: 2;
+        animation: swing 3s ease infinite;
+    
+        
+        
+        
+    }
+    
+    
+
+    
+         
+    #fact3 {
+        position: absolute;
+        width: 800px;
+        left: 200px;
+        height: 100px;
+        z-index: 1;
+        display: none;
+        
+        animation: grow 1.5s linear;
+        
+    }
+    
+    #fact4 {
+        position: absolute;
+        width: 800px;
+        left: 250px;
+        height: 100px;
+        z-index: 1;
+        display: none;
+        animation: grow 1.5s linear;
+        
+        
+    }
+    
+    #fact5 {
+        position: absolute;
+        width: 800px;
+        height: 100px;
+        left: 200px;
+        animation: grow 1.5s linear;
+        z-index: 1;
+        display: none;
+        
+    }
+    
+    
+    #fact6 {
+        position: absolute;
+        width: 800px;
+        height: 100px;
+        left: 200px;
+        animation: grow 1.5s linear;
+        z-index: 1;
+        display: none;
+        
+    }
+    
+       #fact7 {
+        position: absolute;
+        width: 800px;
+        left: 200px;
+        height: 100px;
+        z-index: 1;
+        display: none;
+        
+        animation: grow 1.5s linear;
+        
+    }
+    
+    
+       #fact8 {
+        position: absolute;
+        width: 800px;
+        left: 200px;
+        height: 100px;
+        z-index: 1;
+        display: none;
+        
+        animation: grow 1.5s linear;
+        
+    }
+    
+    
+    
+       #fact9 {
+        position: absolute;
+        width: 800px;
+        left: 200px;
+        height: 100px;
+        z-index: 1;
+        display: none;
+        
+        animation: grow 1.5s linear;
+        
+    }
+    
+    
+    
+       #fact10 {
+        position: absolute;
+        width: 800px;
+        left: 200px;
+        height: 100px;
+        z-index: 1;
+        display: none;
+        
+        animation: grow 1.5s linear;
+        
+    }
+    
+    
+    
+    #fact11 {
+         position: absolute;
+        width: 800px;
+        left: 200px;
+        height: 100px;
+        z-index: 1;
+        display: none;
+        animation: grow2 1.5s linear;
+        
+        
+        
+    }
+    @keyframes grow {
+        from { width: 100px; left: 30px;}
+        to { width: 700px; left: 200px;}
+        }
+    
+    @keyframes grow2 {
+        
+        from { top: 5px;  width: 50px; right: 200px;}
+    } to { width: 600px; right: 500px;
+        
+    }
+    
+@keyframes swing
+{
+    0%
+    {
+        
+        transform: rotate(5deg);
+    }
+    50%
+    {
+        transform: rotate(-5deg);
+    }
+    100%
+    {
+       transform: rotate(5deg)
+    }
+    }
+    
+    #snowman {
+        position: fixed;
+        top: 350px;
+        left: 140px;
+        width: 200px;
+        height: 100px;
+        z-index: 1;
+        
+        
+    }
+
+    
+    #arm {
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        bottom: 225px;
+        left: 325px;
+        animation-name: waving;
+	   animation-duration: 2s;
+	   animation-iteration-count: infinite;
+    }
+    
+    @keyframes waving {
+	0% {
+		transform: rotate(0deg);
+        
+	}
+        
+    
+   
+	50% {
+		
+        transform: rotate(7deg) translateY(10px);
+	}	
+     
+ 
+    100% {
+        transform: rotate(0deg);
+    }
+}
+    
+    
+
+    
+
+ 
+    @keyframes snow { 0% {background-position: -5px -5px, -5px -5px, -5px -5px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: -5px -5px, -5px -5px, -5px -5px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+    #sleigh {
+        position: fixed;
+        top: 220px;
+        left: 350px;
+        width: 400px;
+        height: 110px;
+       
+        
+    }
+    
+
+    @keyframes fly {
+ 0%   { 
+ -moz-transform: translateX(-100%) translateY(50%); /* Firefox bug fix */
+ -webkit-transform: translateX(-100%) translateY(50%); /* Firefox bug fix */
+ transform: translateX(-100%) translateY(50%); 		
+ }
+        
+         100%  {
+             -moz-transform: translate(200%); /* Firefox bug fix */
+ -webkit-transform: translateX(200%); /* Firefox bug fix */
+ transform: translateX(200%); 	
+            
+        }
+ 0% { 
+ -moz-transform: translateX(-150%); /* Firefox bug fix */
+ -webkit-transform: translateX(-150%); /* Firefox bug fix */
+ transform: translateX(-150%); 		
+ }
+    }
+        
+</style>
+</head>
+<body>
+     <div id="fact3">  <img src="card1.svg"> </div>
+     <div id="fact5"> <img src="fact5.svg"> </div>
+    <div id="fact4"> <img src="fact7.svg"> </div>
+    <div id="fact6"> <img src="fact6.svg"> </div>
+    <div id="fact8"> <img src="fact8.svg"> </div>
+    <div id="fact9"> <img src="fact9.svg"> </div>
+    <div id="fact10"> <img src="fact10.svg"> </div>
+    <div id="fact11"> <img src="fact11.svg"> </div>
+    <div id="Ecard">  
+<div id="background"> </div>
+
+         
+   
+   
+       
+      <div id="sign"> <img src="Sign.svg"> </div>
+    <div id="fact2">  <img src="sign2.svg"></div>
+   
+    <div id="trees"> <img src="trees.svg"> </div>
+    
+    <div id="lights">
+    <div id="light1"> <img src="lightbulb1.svg"> </div>
+    <div id="light3"> <img src="lightbulb1.svg"> </div>
+    <div id="light4"> <img src="lightbulb2.svg"> </div>
+    <div id="light2"> <img src="lightbulb2.svg"> </div>
+    <div id="light5"> <img src="lightbulb1.svg"> </div>
+    <div id="light6"> <img src="lightbulb2.svg"> </div>
+  
+        
+ </div>
+   
+      <div id="present"> <img src="present.svg"> </div>
+    <div id="present2"> <img src="present2.svg"> </div>
+    <div id="arm"> <img src="Arm.svg"> </div>
+    <div id="snowman"> <img src="snowman.svg"> </div>
+    <div id="sleigh"> <img src="Sleigh.svg"> </div>
+    <div id="snow"> </div>
+  
+       
+  </div>
+    
+
+    
+
+ <audio id="sound"> </audio>
+
+
+
+<script>
+    
+    var sleigh = document.getElementById("sleigh");
+    var trees = document.getElementById("trees");
+    var snowman = document.getElementById("snowman");
+    var sign = document.getElementById("sign");
+    var background = document.getElementById("background");
+    var lights = document.getElementById("lights");
+    var snow = document.getElementById("snow");
+    var light1 = document.getElementById("light1");
+    var light2 = document.getElementById("light2");
+    var light3 = document.getElementById("light3");
+    var light4 = document.getElementById("light4");
+    var light5 = document.getElementById("light5");
+    var light6 = document.getElementById("light6");
+    var fact5 = document.getElementById("fact5")
+    var fact3 = document.getElementById("fact3");
+    var fact4 = document.getElementById("fact4");
+    var Ecard = document.getElementById("Ecard");
+    var clicks = 1;
+      var sound = document.getElementById("sound");
+            var sound1 = "Jolly.mp3";
+            var sound2 = "bells.mp3";
+    
+    
+    
+    
+    
+    var background = document.getElementById("background");
+    trees.addEventListener("click", function(){
+        fact2.style.display="block";
+    })
+    
+    sleigh.addEventListener("click", function(){
+        console.log('test');
+         sleigh.style.animation= "fly 10s linear infinite";
+        
+        sound.src=sound2;
+                sound.play();
+        
+    })
+    
+    snowman.addEventListener("click", function(){
+        sign.style.display="block";
+        present.style.display="block";
+       present2.style.display="block";
+         
+    })
+    
+    
+    fact3.addEventListener("click", function(){
+        fact3.style.display = 'none';
+        fact3.style.zIndex = '99';
+        Ecard.style.filter = 'none';
+        
+    })
+    
+    fact4.addEventListener("click", function(){
+        fact4.style.display = 'none';
+        fact4.style.zIndex = '99';
+        Ecard.style.filter = 'none';
+    })
+    
+    snow.addEventListener("click", function(){
+      var snowflake1 = document.getElementById("snowflake1"); 
+         var snowflake2 = document.getElementById("snowflake2"); 
+        
+           lights.style.display="block";           
+                                
+                                })
+    
+
+    light1.addEventListener("click", function(){
+        console.log("bulbs");
+       if (clicks==1){
+           
+      fact3.style.display="block";
+      fact3.style.zIndex="1";
+        Ecard.style.filter="blur(5px)";
+        Ecard.style.filter="brightness(50%)";
+          }
+    
+    })
+    
+    light2.addEventListener("click", function(){
+        console.log("bulb2");
+        fact4.style.display="block";
+        fact4.style.zIndex='1';
+         Ecard.style.filter="blur(5px)";
+        Ecard.style.filter="brightness(50%)";
+        
+        
+        
+    })
+    
+  light3.addEventListener("click", function(){
+      console.log("bulb3");
+      fact5.style.display="block";
+      fact5.style.zIndex='1';
+      Ecard.style.filter="blur(5px)";
+        Ecard.style.filter="brightness(50%)";
+      
+      
+        sound.src=sound1;
+                sound.play();
+      
+  })
+         fact5.addEventListener("click", function(){
+        fact5.style.display = 'none';
+        fact5.style.zIndex = '99';
+        Ecard.style.filter = 'none';
+    })
+    
+  light4.addEventListener("click", function(){
+     var fact6 = document.getElementById("fact6");
+    fact6.style.display="block";
+    fact6.style.zIndex="1";
+    Ecard.style.filter="blur(5px)";
+    Ecard.style.filter="brightness(50%)";
+      
+      
+  });
+    
+        fact6.addEventListener("click", function(){
+        fact6.style.display = 'none';
+        fact6.style.zIndex = '99';
+        Ecard.style.filter = 'none';
+    })
+        
+       
+fact2.addEventListener("click", function(){
+    fact2.style.animation="slideout 2s linear";
+    fact2.style.opacity='0';
+    
+    
+})
+
+    fact2.addEventListener("click", function(){
+        fact2.style.display = 'none';
+        fact2.style.zIndex = '99';
+        Ecard.style.filter = 'none';
+    })
+
+  light5.addEventListener("click", function(){
+     var fact8 = document.getElementById("fact8");
+    fact8.style.display="block";
+    fact8.style.zIndex="1";
+    Ecard.style.filter="blur(5px)";
+    Ecard.style.filter="brightness(50%)";
+      
+  })
+  
+      fact8.addEventListener("click", function(){
+        fact8.style.display = 'none';
+        fact8.style.zIndex = '99';
+        Ecard.style.filter = 'none';
+    })
+  
+    light6.addEventListener("click", function(){
+     var fact9 = document.getElementById("fact9");
+    fact9.style.display="block";
+    fact9.style.zIndex="1";
+    Ecard.style.filter="blur(5px)";
+    Ecard.style.filter="brightness(50%)";
+      
+  })
+  
+        fact9.addEventListener("click", function(){
+        fact9.style.display = 'none';
+        fact9.style.zIndex = '99';
+        Ecard.style.filter = 'none';
+    })
+        
+        
+present.addEventListener("click", function(){
+    var fact10 = document.getElementById("fact10");
+    fact10.style.display="block";
+    Ecard.style.filter="blur(5px)";
+    Ecard.style.filter="brightness(50%)";
+    
+    
+})
+
+    fact10.addEventListener("click", function(){
+        fact10.style.display = 'none';
+        fact10.style.zIndex = '99';
+        Ecard.style.filter = 'none';
+    })
+
+present2.addEventListener("click", function(){
+     var fact11 = document.getElementById("fact11");
+    fact11.style.display="block";
+    Ecard.style.filter="blur(5px)";
+    Ecard.style.filter="brightness(50%)";
+    
+    
+})
+
+ fact11.addEventListener("click", function(){
+        fact11.style.display = 'none';
+        fact11.style.zIndex = '99';
+        Ecard.style.filter = 'none';
+    })
+
+
+ 
+ 
+</script>
+</body>
+</html>
